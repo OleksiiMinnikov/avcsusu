@@ -1,0 +1,647 @@
+<span style="line-height: 20.8px;"><!--ФИЛИАЛ ПРОФПЕРЕКЛАД--> #if(${task.project.customer.branch.id}==1) <!--ПОТОК - "Перевод; редактура; отправка на e-mail"--> #if(${task.workflow.id}==29) <span style="color:#636363"> </span></span>
+<table align="left" border="0" cellpadding="1" cellspacing="0" style="width:1000px;">
+	<tbody>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=54" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363">Добрый день!<br />Перевод <strong style="color:#f16a4d;">${task.idNumber}</strong> ${task.project.customerProjectNumber} <strong>готов</strong>.<br /><strong>Вы можете скачать его по <a href="${customerHTTP.output}">ссылке</a> или найти во вложении.</strong></span></span></td>
+		</tr>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=56" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363"><strong>Есть замечания к качеству перевода, работе менеджера или бухгалтерии?</strong><br />Пожалуйста, сообщите об этом в отдел контроля качества: qc@profpereklad.ua, +38(044)22-999-02, внутр. 920.</span></span></td>
+		</tr>
+	</tbody>
+</table>
+<span style="line-height: 20.8px;"><span style="color:#636363"> </span><br /><br /><!--ПОТОК - "редактирование; проверка и отправка на e-mail и похожие"--> #elseif(${task.workflow.id}==31 || ${task.workflow.id}==164 || ${task.workflow.id}==130 || ${task.workflow.id}==158 || ${task.workflow.id}==169 || ${task.workflow.id}==137 || ${task.workflow.id}==154 || ${task.workflow.id}==178 || ${task.workflow.id}==176 || ${task.workflow.id}==128 || ${task.workflow.id}==147 || ${task.workflow.id}==152 || ${task.workflow.id}==189 || ${task.workflow.id}==188 || ${task.workflow.id}==187 || ${task.workflow.id}==186 || ${task.workflow.id}==183 || ${task.workflow.id}==190 || ${task.workflow.id}==193 || ${task.workflow.id}==194 || ${task.workflow.id}==195 || ${task.workflow.id}==198 || ${task.workflow.id}==201|| ${task.workflow.id}==203|| ${task.workflow.id}==204|| ${task.workflow.id}==207|| ${task.workflow.id}==208 || ${task.workflow.id}==211 || ${task.workflow.id}==212 || ${task.workflow.id}==213 || ${task.workflow.id}==214 || ${task.workflow.id}==215 || ${task.workflow.id}==216 || ${task.workflow.id}==224 || ${task.workflow.id}==227)<span style="color:#636363"> </span></span>
+
+<table align="left" border="0" cellpadding="1" cellspacing="0" style="width:1000px;">
+	<tbody>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=54" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363">Добрый день!<br />Перевод <strong style="color:#f16a4d;">${task.idNumber}</strong> ${task.project.customerProjectNumber} <strong>готов</strong>.<br /><strong>Вы можете скачать его по <a href="${customerHTTP.output}">ссылке</a> или найти во вложении.</strong></span></span></td>
+		</tr>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=56" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363"><strong>Есть замечания к качеству перевода, работе менеджера или бухгалтерии?</strong><br />Пожалуйста, сообщите об этом в отдел контроля качества: qc@profpereklad.ua, +38(044)22-999-02, внутр. 920.</span></span></td>
+		</tr>
+	</tbody>
+</table>
+<span style="line-height: 20.8px;"><span style="color:#636363"> </span><br /><br /><!--ДРУГИЕ ПОТОКИ--> #else <span style="color:#636363"> </span></span>
+
+<table align="left" border="0" cellpadding="1" cellspacing="0" style="width:1000px;">
+	<tbody>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=49" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363">Добрый день!<br />Перевод <strong style="color:#f16a4d;">${task.idNumber}</strong> ${task.project.customerProjectNumber} <strong>готов</strong>.<br /><br />Вы можете забрать документы в офисе бюро переводов «ПРОФПЕРЕКЛАД» по адресу: Киев, Деловая, 5Б, оф. 605 в любое удобное для Вас время с понедельника по пятницу с 09:00 до 18:00.<br />Если Вам неудобно забирать документы у нас в офисе, обратитесь к Вашему менеджеру и документы будут отправлены через курьерскую службу. </span></span></td>
+		</tr>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=56" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363"><strong>Есть замечания к качеству перевода, бухгалтерии или работе менеджера?</strong><br />Пожалуйста, сообщите об этом в отдел контроля качества: qc@profpereklad.ua, +38(044)22-999-02, внутр. 920.</span></span></td>
+		</tr>
+	</tbody>
+</table>
+<span style="line-height: 20.8px;"><span style="color:#636363"> </span><br /><br />#end <!--ФИЛИАЛ PROFTRANSLATION (РОССИЯ, СНГ)--> #elseif(${task.customer.branch.id}==4) <span style="color:#636363"> </span></span>
+
+<table align="left" border="0" cellpadding="1" cellspacing="0" style="width:1000px;">
+	<tbody>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=54" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363">Коллеги!<br />Ваш заказ <strong style="color:#f16a4d;">${task.idNumber}</strong> ${task.project.customerProjectNumber} готов.<br /><strong>Скачать перевод можно по <a href="${customerHTTP.output}">ссылке</a> или найти во вложении.</strong></span></span></td>
+		</tr>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=55" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363">#set ($value = 0) #if (${task.workflow.id}==137) #set ($value = 1) #else Итоговая стоимость по заказу составила: <strong style="color:#f16a4d;">${task.project.totalAgreed} ${task.project.currency.symbol}</strong>#end<br />Оплата всех выполненных для Вас заказов осуществляется раз в месяц.<br />Счета выставляются в период с 1 по 5 число каждого месяца.</span></span></td>
+		</tr>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=56" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363"><strong>Есть замечания к качеству перевода, работе менеджера или бухгалтерии?</strong><br />Пожалуйста, сообщите об этом в отдел контроля качества: qc@profpereklad.ua, +38(044)22-999-02, внутр. 920.</span></span></td>
+		</tr>
+	</tbody>
+</table>
+<span style="line-height: 20.8px;"><span style="color:#636363"> </span><br /><br /><!--ФИЛИАЛ РОССИЯ LOCEVER--> #elseif(${task.customer.branch.id}==7) <span style="color:#636363"> </span></span> <!--ПОТОК - "Перевод; редактура; отправка на e-mail"--> #if(${task.workflow.id}==29) <span style="color:#636363"> </span>
+
+<table align="left" border="0" cellpadding="1" cellspacing="0" style="width:1000px;">
+	<tbody>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=54" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363">Добрый день!<br />Перевод <strong style="color:#f16a4d;">${task.idNumber}</strong> ${task.project.customerProjectNumber} <strong>готов</strong>.<br /><strong>Вы можете скачать его по <a href="${customerHTTP.output}">ссылке</a> или найти во вложении.</strong></span></span></td>
+		</tr>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=56" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363"><strong>Есть замечания к качеству перевода, работе менеджера или бухгалтерии?</strong><br />Пожалуйста, сообщите об этом в отдел контроля качества: info@locever.com</span></span></td>
+		</tr>
+	</tbody>
+</table>
+<span style="line-height: 20.8px;"><span style="color:#636363"> </span><br /><br /><!--ПОТОК - "редактирование; проверка и отправка на e-mail и похожие"--> #elseif(${task.workflow.id}==31 || ${task.workflow.id}==164 || ${task.workflow.id}==130 || ${task.workflow.id}==158 || ${task.workflow.id}==169 || ${task.workflow.id}==137 || ${task.workflow.id}==154 || ${task.workflow.id}==178 || ${task.workflow.id}==176 || ${task.workflow.id}==128 || ${task.workflow.id}==147 || ${task.workflow.id}==189 || ${task.workflow.id}==188 || ${task.workflow.id}==187 || ${task.workflow.id}==186 || ${task.workflow.id}==183 || ${task.workflow.id}==190 || ${task.workflow.id}==193 || ${task.workflow.id}==194 || ${task.workflow.id}==195 || ${task.workflow.id}==198 || ${task.workflow.id}==201|| ${task.workflow.id}==203|| ${task.workflow.id}==204|| ${task.workflow.id}==207|| ${task.workflow.id}==208 || ${task.workflow.id}==211 || ${task.workflow.id}==212 || ${task.workflow.id}==213 || ${task.workflow.id}==214 || ${task.workflow.id}==215 || ${task.workflow.id}==216) <span style="color:#636363"> </span></span>
+
+<table align="left" border="0" cellpadding="1" cellspacing="0" style="width:1000px;">
+	<tbody>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=54" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363">Добрый день!<br />Перевод <strong style="color:#f16a4d;">${task.idNumber}</strong> ${task.project.customerProjectNumber} <strong>готов</strong>.<br /><strong>Вы можете скачать его по <a href="${customerHTTP.output}">ссылке</a> или найти во вложении.</strong></span></span></td>
+		</tr>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=56" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363"><strong>Есть замечания к качеству перевода, работе менеджера или бухгалтерии?</strong><br />Пожалуйста, сообщите об этом в отдел контроля качества: info@locever.com</span></span></td>
+		</tr>
+	</tbody>
+</table>
+<span style="line-height: 20.8px;"><span style="color:#636363"> </span><br /><br /><!--ДРУГИЕ ПОТОКИ--> #else <span style="color:#636363"> </span></span>
+
+<table align="left" border="0" cellpadding="1" cellspacing="0" style="width:1000px;">
+	<tbody>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=49" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363">Добрый день!<br />Перевод <strong style="color:#f16a4d;">${task.idNumber}</strong> ${task.project.customerProjectNumber} <strong>готов</strong>.</span></span></td>
+		</tr>
+		<tr>
+			<td style="width: 15%; text-align: center; background-color: rgb(247, 244, 234);"><span style="line-height: 20.8px;"><span style="color:#636363"><img border="0" height="48" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=56" width="48" /></span></span></td>
+			<td style="width: 85%; background-color: rgb(247, 244, 234);"><br /><span style="line-height: 20.8px;"><span style="color:#636363"><strong>Есть замечания к качеству перевода, бухгалтерии или работе менеджера?</strong><br />Пожалуйста, сообщите об этом: info@locever.com.</span></span></td>
+		</tr>
+	</tbody>
+</table>
+<span style="line-height: 20.8px;"><span style="color:#636363"> </span><br /><br />#end <!--ФИЛИАЛ HR (НА ДАННЫЙ МОМЕНТ ЭТОТ ШАБЛОН НЕ ИСПОЛЬЗУЕМ)--> #elseif (${task.customer.branch.id}==6) Текст для ейчар филиала<br /><br /><!--ДРУГИЕ ФИЛИАЛЫ (НА ДАННЫЙ МОМЕНТ ЭТОТ ШАБЛОН НЕ ИСПОЛЬЗУЕМ)--> #elseN/A<br />#end<br /><!--ПОДПИСЬ ДЛЯ ФИЛИАЛА ПРОФПЕРЕКЛАД--> #if(${task.project.customer.branch.id}==1) </span><br /><br /><br /><br /><br /><!--Титорова--><!--Титорова--> #if(${utils.unwrap($task).project.projectManager.id}==11)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=92" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Мария Титорова<br />Заместитель руководителя Департамента<br />управления переводческими проектами<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">918</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Mariia Titorova<br />Deputy Head of the Translation Project<br />Management Department<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">918</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br /><br /><!--Любовь Яременко--><!--Яременко--> #elseif(${utils.unwrap($task).project.projectManager.id}==59)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=307" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Любовь Яременко<br />Руководитель Департамента<br />управления переводческими проектами<br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">937</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Liubov Yaremenko<br />Head of Translation Project<br />Management Department<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">937</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br /><br /><!--Ольга Волошина--><!--Волошина--> #elseif(${utils.unwrap($task).project.projectManager.id}==19)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=300" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Ольга Волошина<br />Руководитель команды<br />Старший менеджер переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">926 </font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Olga Voloshyna<br />Team Lead<br />Senior Project Manager<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">926</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br /><br /><!--Шевчук--> #elseif(${utils.unwrap($task).project.projectManager.id}==189)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=388" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Шевчук Юлия<br /><br />Младший мнеджер переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">911</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Shevchuk Yulia<br /><br />Junior Project Manager<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">911</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br />  <!--Олешкл--> #elseif(${utils.unwrap($task).project.projectManager.id}==173)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=338" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2.2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Евгения Олешко<br />Менеджер<br />переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">904</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Evgeniya Oleshko<br />Project Manager<br /><br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">904</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br />  <!--Русяева--> #elseif(${utils.unwrap($task).project.projectManager.id}==162)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=305" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Алина Русяева<br /><br />Менеджер переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">919</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Alina Rusyaeva<br /><br />Project Manager<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">919</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br />  <!--Юлия Костючик --> #elseif(${utils.unwrap($task).project.projectManager.id}==152)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=301" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2.2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Юлия Костючик<br />Руководитель команды<br />Старший менеджер переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">942</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Yulia Kostiuchyk<br />Team Lead<br />Senior Project Manager<br /><br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">942</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br />  <!--Онищенко --> #elseif(${utils.unwrap($task).project.projectManager.id}==168)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=304" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2.2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Валерія Онищенко<br />Менеджер<br />переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">912</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Valeriia Onischenko<br />Project Manager<br /><br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">912</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br />  <!--Мартиненко --> #elseif(${utils.unwrap($task).project.projectManager.id}==167)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=302" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2.2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Ольга Мартиненко<br />Менеджер<br />переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">903</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Olha Martynenko<br />Project Manager<br /><br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">903</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<!--Другой-->#else#end <span style="line-height: 1.5;"> </span> <span style="line-height: 1.5;"> <!--ПОДПИСЬ ДЛЯ ФИЛИАЛА PROFTRANSLATION (РОССИЯ, СНГ)--> #elseif(${task.customer.branch.id}==4) </span>
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center; width: 100%;"></td>
+			<td style="text-align: center; width: 100%;"></td>
+		</tr>
+	</tbody>
+</table>
+<span style="line-height: 20.8px;"> </span>
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+		</tr>
+	</tbody>
+</table>
+<!--Титорова--><!--Титорова--> #if(${utils.unwrap($task).project.projectManager.id}==11)
+
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=306" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Мария Титорова<br />Заместитель руководителя Департамента<br />управления переводческими проектами<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">918</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Mariia Titorova<br />Deputy Head of the Translation Project<br />Management Department<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">918</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br /><br /><!--Любовь Яременко--><!--Яременко--> #elseif(${utils.unwrap($task).project.projectManager.id}==59)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=307" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Любовь Яременко<br />Руководитель Департамента<br />управления переводческими проектами<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">937</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Liubov Yaremenko<br />Head of Translation Project<br />Management Department<br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">937</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br /><br /><!--Ольга Волошина--><!--Волошина--> #elseif(${utils.unwrap($task).project.projectManager.id}==19)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=300" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Ольга Волошина<br />Руководитель команды<br />Старший менеджер переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">926 </font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Olga Voloshyna<br />Team Lead<br />Senior Project Manager<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">926</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br /><br /><!--Шевчук--> #elseif(${utils.unwrap($task).project.projectManager.id}==189)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=388" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Шевчук Юлия<br /><br />Младший менеджер переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">911</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Shevchuk Yulia<br /><br />Junior Project Manager<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">911</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br />  <!--Краснолоб--> #elseif(${utils.unwrap($task).project.projectManager.id}==159)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=171" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Мария Краснолоб<br /><br />Менеджер переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">902</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Maria Krasnolob<br /><br />Junior Project Manager<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">902</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br />  <!--Русяева--> #elseif(${utils.unwrap($task).project.projectManager.id}==162)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=305" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Алина Русяева<br /><br />Менеджер переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">919</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Alina Rusyaeva<br /><br />Project Manager<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">919</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br />  <!--Юлия Костючик --> #elseif(${utils.unwrap($task).project.projectManager.id}==152)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=301" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2.2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Юлия Костючик<br />Руководитель команды<br />Старший менеджер переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">942</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Yulia Kostiuchyk<br />Team Lead<br />Senior Project Manager<br /><br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">942</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br />  <!--Онищенко --> #elseif(${utils.unwrap($task).project.projectManager.id}==168)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=304" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2.2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Валерія Онищенко<br />Менеджер<br />переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">912</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Valeriia Onischenko<br />Project Manager<br /><br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">912</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<br /><br /><br /><br />  <!--Мартиненко --> #elseif(${utils.unwrap($task).project.projectManager.id}==167)
+<table>
+	<tbody>
+		<tr>
+			<td><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=302" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; margin-bottom:70px;" /><br /><img align="center" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=130" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 100px; width: 100px; " /></td>
+			<td>
+			<div style="border-style: solid; border-width: 0px 2.2px 0px 0px"><br /><span style="line-height: 1.5; color:#58595B"><font style="font-family:Verdana;">С уважением,<br />Ольга Мартиненко<br />Менеджер<br />переводческих проектов<br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, внутр. <font color="red">903</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=35" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />03150, Украина, г. Киев,<br />ул. Деловая, 5Б,<br />офис 605<br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font></span></div>
+			</td>
+			<td></td>
+			<td><br /><span style="line-height: 1.5; color:#58595B;"><font style="font-family:Verdana;">Best regards,<br />Olha Martynenko<br />Project Manager<br /><br /><br /><font color="red"><b>+38(044)22-999-02</b></font><b>, ext. <font color="red">903</font></b><br /><br /><br /><img src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=149" style="line-height: 1.6; border-width: 0px; border-style: solid; height: 26px; width: 200px;" /><br />5B Dilova Str., 6th floor,<br />Kyiv, Ukraine, 03150<br /><br /><a href="http://www.profpereklad.ua" style="line-height: 1.6;">profpereklad.ua</a> </font> </span></td>
+		</tr>
+	</tbody>
+</table>
+<!--Другой-->#else#end <span style="line-height: 20.8px;"> </span>
+
+<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="width: 15%; border-right-color: #ed1c24; border-right-width: 3px; border-right-style: solid; text-align: center;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363"><img alt="" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=11" style="width: 200px; height: 26px;" /></span></span></td>
+			<td style="width: 85%;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363">01030, Украина, Киев,<br />ул. Б. Хмельницкого, 16-22, 12 этаж<br /><a href="http://profpereklad.ua/?lang=en">proftranslation.org</a></span></span></td>
+		</tr>
+	</tbody>
+</table>
+<span style="line-height: 20.8px;"> <!--ПОДПИСЬ ДЛЯ ФИЛИАЛА LOCEVER----> #elseif(${task.customer.branch.id}==7) </span>
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center; width: 100%;"></td>
+			<td style="text-align: center; width: 100%;"></td>
+		</tr>
+	</tbody>
+</table>
+<span style="line-height: 20.8px;"> </span> <!--Титорова--><!--Титорова--> #if(${utils.unwrap($task).project.projectManager.id}==11)
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center; width: 15%;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363"><img border="0" height="90" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=306" width="90" /> </span></span></td>
+			<td style="width: 85%;"><span style="line-height: 20.8px;"><strong><span style="line-height: 1.5; color:#636363">С уважением,<br />Мария Титорова<br />Заместитель руководителя Департамента<br />управления переводческими проектами </span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width: 100%;">
+			<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+				<tbody>
+					<tr>
+						<td style="width: 15%; border-right-color: #981B1E; border-right-width: 3px; border-right-style: solid; text-align: center;"><span style="line-height: 1.5; color:#58595B"><img alt="" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=127" style="width: 200px; height: 70px;" /></span></td>
+						<td style="width: 85%;"><span style="line-height: 1.5; color:#58595B">125315, Россия, Москва<br />ул.Часовая, дом 24, стр. 2, офис 410<br />+7(499)490-75-74 <a href="http://www.locever.com">locever.com</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--Любовь Яременко--><!--LOCEVER----> #elseif(${utils.unwrap($task).project.projectManager.id}==144)
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center; width: 15%;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363"><img border="0" height="90" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=307" width="90" /> </span></span></td>
+			<td style="width: 85%;"><span style="line-height: 20.8px;"><strong><span style="line-height: 1.5; color:#636363">С уважением,<br />Любовь Яременко<br />Руководитель Департамента<br />управления переводческими проектами </span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width: 100%;">
+			<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+				<tbody>
+					<tr>
+						<td style="width: 15%; border-right-color: #981B1E; border-right-width: 3px; border-right-style: solid; text-align: center;"><span style="line-height: 1.5; color:#58595B"><img alt="" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=127" style="width: 200px; height: 70px;" /></span></td>
+						<td style="width: 85%;"><span style="line-height: 1.5; color:#58595B">125315, Россия, Москва<br />ул.Часовая, дом 24, стр. 2, офис 410<br />+7(499)490-75-74 <a href="http://www.locever.com">locever.com</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--Любовь Яременко--><!--Яременко--> #elseif(${utils.unwrap($task).project.projectManager.id}==59)
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center; width: 15%;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363"><img border="0" height="90" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=307" width="90" /> </span></span></td>
+			<td style="width: 85%;"><span style="line-height: 20.8px;"><strong><span style="line-height: 1.5; color:#636363">С уважением,<br />Любовь Яременко<br />Руководитель Департамента<br />управления переводческими проектами </span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width: 100%;">
+			<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+				<tbody>
+					<tr>
+						<td style="width: 15%; border-right-color: #981B1E; border-right-width: 3px; border-right-style: solid; text-align: center;"><span style="line-height: 1.5; color:#58595B"><img alt="" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=127" style="width: 200px; height: 70px;" /></span></td>
+						<td style="width: 85%;"><span style="line-height: 1.5; color:#58595B">125315, Россия, Москва<br />ул.Часовая, дом 24, стр. 2, офис 410<br />+7(499)490-75-74 <a href="http://www.locever.com">locever.com</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--Ольга Волошина--><!--Волошина--> #elseif(${utils.unwrap($task).project.projectManager.id}==19)
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center; width: 15%;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363"><img border="0" height="90" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=300" width="90" /> </span></span></td>
+			<td style="width: 85%;"><span style="line-height: 20.8px;"><strong><span style="line-height: 1.5; color:#636363">С уважением,<br />Ольга Волошина<br />Руководитель команды<br />Старший менеджер переводческих проектов </span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width: 100%;">
+			<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+				<tbody>
+					<tr>
+						<td style="width: 15%; border-right-color: #981B1E; border-right-width: 3px; border-right-style: solid; text-align: center;"><span style="line-height: 1.5; color:#58595B"><img alt="" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=127" style="width: 200px; height: 70px;" /></span></td>
+						<td style="width: 85%;"><span style="line-height: 1.5; color:#58595B">125315, Россия, Москва<br />ул.Часовая, дом 24, стр. 2, офис 410<br />+7(499)490-75-74 <a href="http://www.locever.com">locever.com</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--Ольга Волошина--><!--LOCEVER--> #elseif(${utils.unwrap($task).project.projectManager.id}==170)
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center; width: 15%;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363"><img border="0" height="90" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=300" width="90" /> </span></span></td>
+			<td style="width: 85%;"><span style="line-height: 20.8px;"><strong><span style="line-height: 1.5; color:#636363">С уважением,<br />Ольга Волошина<br />Руководитель команды<br />Старший менеджер переводческих проектов </span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width: 100%;">
+			<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+				<tbody>
+					<tr>
+						<td style="width: 15%; border-right-color: #981B1E; border-right-width: 3px; border-right-style: solid; text-align: center;"><span style="line-height: 1.5; color:#58595B"><img alt="" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=127" style="width: 200px; height: 70px;" /></span></td>
+						<td style="width: 85%;"><span style="line-height: 1.5; color:#58595B">125315, Россия, Москва<br />ул.Часовая, дом 24, стр. 2, офис 410<br />+7(499)490-75-74 <a href="http://www.locever.com">locever.com</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--Шевчук--> #elseif(${utils.unwrap($task).project.projectManager.id}==192)
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center; width: 15%;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363"><img border="0" height="90" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=388" width="90" /> </span></span></td>
+			<td style="width: 85%;"><span style="line-height: 20.8px;"><strong><span style="line-height: 1.5; color:#636363">С уважением,<br />Шевчук Юлия<br />Младший менеджер переводческих проектов </span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width: 100%;">
+			<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+				<tbody>
+					<tr>
+						<td style="width: 15%; border-right-color: #981B1E; border-right-width: 3px; border-right-style: solid; text-align: center;"><span style="line-height: 1.5; color:#58595B"><img alt="" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=127" style="width: 200px; height: 70px;" /></span></td>
+						<td style="width: 85%;"><span style="line-height: 1.5; color:#58595B">125315, Россия, Москва<br />ул.Часовая, дом 24, стр. 2, офис 410<br />+7(499)490-75-74 <a href="http://www.locever.com">locever.com</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--Шевчука LOCEVER----> #elseif(${utils.unwrap($task).project.projectManager.id}==163)
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center; width: 15%;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363"><img border="0" height="90" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=388" width="90" /> </span></span></td>
+			<td style="width: 85%;"><span style="line-height: 20.8px;"><strong><span style="line-height: 1.5; color:#636363">С уважением,<br />Шевчук Юлия<br />Младший менеджер переводческих проектов </span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width: 100%;">
+			<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+				<tbody>
+					<tr>
+						<td style="width: 15%; border-right-color: #981B1E; border-right-width: 3px; border-right-style: solid; text-align: center;"><span style="line-height: 1.5; color:#58595B"><img alt="" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=127" style="width: 200px; height: 70px;" /></span></td>
+						<td style="width: 85%;"><span style="line-height: 1.5; color:#58595B">125315, Россия, Москва<br />ул.Часовая, дом 24, стр. 2, офис 410<br />+7(499)490-75-74 <a href="http://www.locever.com">locever.com</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<!--Олешко LOCEVER----> #elseif(${utils.unwrap($task).project.projectManager.id}==197)
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center; width: 15%;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363"><img border="0" height="90" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=338" width="90" /> </span></span></td>
+			<td style="width: 85%;"><span style="line-height: 20.8px;"><strong><span style="line-height: 1.5; color:#636363">С уважением,<br />Олешко Евгеня<br />Менеджер переводческих проектов </span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width: 100%;">
+			<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+				<tbody>
+					<tr>
+						<td style="width: 15%; border-right-color: #981B1E; border-right-width: 3px; border-right-style: solid; text-align: center;"><span style="line-height: 1.5; color:#58595B"><img alt="" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=127" style="width: 200px; height: 70px;" /></span></td>
+						<td style="width: 85%;"><span style="line-height: 1.5; color:#58595B">125315, Россия, Москва<br />ул.Часовая, дом 24, стр. 2, офис 410<br />+7(499)490-75-74 <a href="http://www.locever.com">locever.com</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<!--Юлия Костючик--> #elseif(${utils.unwrap($task).project.projectManager.id}==165)
+
+<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td style="text-align: center; width: 15%;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363"><img border="0" height="90" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=301" width="90" /> </span></span></td>
+			<td style="width: 85%;"><span style="line-height: 20.8px;"><strong><span style="line-height: 1.5; color:#636363">С уважением,<br />Юлия Костючик<br />Руководитель команды<br />Менеджер<br />переводческих проектов </span></strong></span></td>
+		</tr>
+	</tbody>
+</table>
+
+<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+	<tbody>
+		<tr>
+			<td colspan="2" style="width: 100%;">
+			<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+				<tbody>
+					<tr>
+						<td style="width: 15%; border-right-color: #981B1E; border-right-width: 3px; border-right-style: solid; text-align: center;"><span style="line-height: 1.5; color:#58595B"><img alt="" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=127" style="width: 200px; height: 70px;" /></span></td>
+						<td style="width: 85%;"><span style="line-height: 1.5; color:#58595B">125315, Россия, Москва<br />ул.Часовая, дом 24, стр. 2, офис 410<br />+7(499)490-75-74 <a href="http://www.locever.com">locever.com</a></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<span style="line-height: 20.8px;"><!--Онищенко--> #elseif(${utils.unwrap($task).project.projectManager.id}==174) </span>
+
+			<table border="0" cellpadding="10" cellspacing="1" style="width:600px;">
+				<tbody>
+					<tr>
+						<td style="text-align: center; width: 15%;"><span style="line-height: 20.8px;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#636363"><img border="0" height="90" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=304" width="90" /> </span></span></span></td>
+						<td style="width: 85%;"><span style="line-height: 20.8px;"><span style="line-height: 20.8px;"><strong><span style="line-height: 1.5; color:#636363">С уважением,<br />Валерия Онищенко<br />Менеджер<br />переводческих проектов </span></strong></span></span></td>
+					</tr>
+				</tbody>
+			</table>
+			<span style="line-height: 20.8px;"> </span>
+
+			<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+				<tbody>
+					<tr>
+						<td colspan="2" style="width: 100%;">
+						<table border="0" cellpadding="5" cellspacing="1" style="width:600px;">
+							<tbody>
+								<tr>
+									<td style="width: 15%; border-right-color: #981B1E; border-right-width: 3px; border-right-style: solid; text-align: center;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#58595B"><img alt="" src="https://xtrf.profpereklad.ua/customer-api/system/email/image?id=127" style="width: 200px; height: 70px;" /></span></span></td>
+									<td style="width: 85%;"><span style="line-height: 20.8px;"><span style="line-height: 1.5; color:#58595B">125315, Россия, Москва<br />ул.Часовая, дом 24, стр. 2, офис 410<br />+7(499)490-75-74 <a href="http://www.locever.com">locever.com</a></span></span></td>
+								</tr>
+							</tbody>
+						</table>
+						<span style="line-height: 20.8px;"><span style="line-height: 20.8px;"><!--Другой-->#else#end <span style="line-height: 20.8px;"> </span> <!--ПОДПИСЬ ДЛЯ ДРУГИХ ФИЛИАЛОВ--> #else </span> #end<br />${FOOTER}</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<span style="line-height: 20.8px;"> <span style="line-height: 20.8px;"> <span style="line-height: 20.8px;"> </span></span></span></td>
+		</tr>
+	</tbody>
+</table>
+<gdiv></gdiv>
